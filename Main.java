@@ -1,22 +1,52 @@
 public class Main {
     public static void main(String[] args) {
 
-        int resultado = suma(1 ,2 ,3);
-        System.out.println(resultado);
+        float numeroIf = -0.45f;
 
-        Coche MiCoche = new Coche();
-        MiCoche.AddDoor();
-        System.out.println(MiCoche.numberOfDoors);
-    }
+        if (numeroIf != 0) {
+            if (numeroIf > 0) {
+                System.out.println("positivo");
+            }
+            if (numeroIf < 0) {
+                System.out.println("negativo");
+            }
+        }else {
+            System.out.println("cero");
+        }
 
-    public static int suma(int a , int b , int c){
-        return a+b+c;
-    }
-}
-class Coche{
-    public int numberOfDoors = 2;
-    public  void AddDoor(){
-        this.numberOfDoors++;
+        int numeroWhile = 0;
+        while (numeroWhile < 3){
+            System.out.println("ejecucion número");
+            System.out.println(numeroWhile);
+            numeroWhile++;
+        }
 
+        do{
+            System.out.println("ejecucion  de doWhile");
+            numeroWhile++;
+        }while (numeroWhile == 3);
+
+        for(int numeroFor = 0; numeroFor <= 3; numeroFor++){
+            System.out.println(numeroFor);
+        }
+
+        var estacion = "OpenBoot-camp";
+
+        switch (estacion){
+            case "invierno":
+                System.out.println("invierno");
+                break;
+            case "primavera":
+                System.out.println("primavera");
+                break;
+            case "verano":
+                System.out.println("verano");
+                break;
+            case "otoño":
+                System.out.println("otoño");
+                break;
+            default:
+                System.out.println("no es una estacion");
+        }
     }
 }
